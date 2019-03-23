@@ -1,0 +1,146 @@
+{% layout "jbfstore-cart" %}
+
+<h1>Shopping Cart</h1>
+
+{% if cart.item_count == 0 %}
+  {% include 'capture-landing-id' %}
+  <p style="font-weight: bold; margin: 0 0 18px 0;">Your shopping basket is empty.</p>
+    <div style="margin: 0 0 24px 0;"><a href="{{ landing_url }}"><img src="{{ 'button_2017_continue-shopping_0.png' | file_url }}" width="168" height="25" /></a></div>  
+{% else %}
+<script type="text/javascript">
+  function remove_item(id) {
+      document.getElementById('updates_'+id).value = 0;
+      document.getElementById('cartform').submit();
+  }
+</script>
+
+<form action="/cart" method="post" id="cartform">
+
+  <table id="basket" class="cart-table">
+    <tr>
+      <th class="cart-description"><h3>Item Description</h3></th>
+      <th class="cart-unit-cost"><h3>Cost</h3></th>
+      <th class="cart-third-col-spacer"></th>
+      <th class="cart-quantity"><h3>Qty</h3></th>
+      <td class="cart-delete"><h3>Delete</h3></th>
+      <th class="cart-total"><h3>Subtotal</h3></th>
+    </tr>
+    {% for item in cart.items %}
+    {% comment %}
+    <tr>
+      <td colspan="6">
+        {% unless item.properties == empty %}
+          {{ item.properties | join: ' | ' }}
+        {% endunless %}
+        {% if item.variant.title == 'Default Title' %}{{ item.title }}{% else %}{{ item.variant.title }}{% endif %}
+      </td>
+    </tr>
+    {% endcomment %}
+    <tr class="basket-{% cycle 'odd', 'even' %}">
+      <td class="cart-description">{{ item.product.title }}</td>
+      <td class="cart-unit-cost">{{ item.price | money }}{% if item.variant.compare_at_price > item.price %}<br /><del>{{ item.variant.compare_at_price | money }}</del>{% endif %}</td>
+      <td class="cart-third-col-spacer"></td>
+
+      <td class="cart-quantity">
+        {% case item.variant.id %}
+
+        {% when 85755152 %}
+          <p class="cart-quantity-style-text">1</p>
+          <input type="hidden" name="updates[{{item.variant.id}}]" id="updates_{{ item.variant.id }}" value="1" />
+          
+        {% when 83605852 %}
+          <p class="cart-quantity-style-text">1</p>
+          <input type="hidden" name="updates[{{item.variant.id}}]" id="updates_{{ item.variant.id }}" value="1" />
+          
+        {% when 85873372 %}
+          <select name="updates[{{item.variant.id}}]" id="updates_{{ item.variant.id }}">
+            <option value="0">0</option>
+            <option value="1" {% if item.quantity == 1 %}selected="selected"{% endif %}>1</option>
+            <option value="2" {% if item.quantity >= 2 %}selected="selected"{% endif %}>2</option>
+          </select>
+            
+        {% when 85879972 %}
+          <select name="updates[{{item.variant.id}}]" id="updates_{{ item.variant.id }}">
+            <option value="0">0</option>
+            <option value="1" {% if item.quantity == 1 %}selected="selected"{% endif %}>1</option>
+            <option value="2" {% if item.quantity == 2 %}selected="selected"{% endif %}>2</option>
+            <option value="3" {% if item.quantity == 3 %}selected="selected"{% endif %}>3</option>
+            <option value="4" {% if item.quantity >= 4 %}selected="selected"{% endif %}>4</option>
+          </select>
+          
+        {% when 83606332 %}
+          <select name="updates[{{item.variant.id}}]" id="updates_{{ item.variant.id }}">
+            <option value="0">0</option>
+            <option value="1" {% if item.quantity == 1 %}selected="selected"{% endif %}>1</option>
+            <option value="2" {% if item.quantity == 2 %}selected="selected"{% endif %}>2</option>
+            <option value="3" {% if item.quantity == 3 %}selected="selected"{% endif %}>3</option>
+            <option value="4" {% if item.quantity >= 4 %}selected="selected"{% endif %}>4</option>
+          </select>
+          
+        {% else %}
+          <input class="cart-quantity-style" type="text" name="updates[{{item.variant.id}}]" id="updates_{{ item.variant.id }}" value="{{ item.quantity }}" onfocus="this.select();"/>
+          
+        {% endcase %}
+      </td>
+
+      <td class="cart-delete"><a href="#" onclick="remove_item({{ item.variant.id }}); return false;">Remove</a></td>
+      <td class="cart-total">{{ item.line_price | money }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <p class="in-line-divider" style="margin: 0 0 12px 0;">&nbsp;</p>
+
+  {% for item in cart.items %}
+    {% assign total_props = item.properties | size %}
+    {% if total_props > 0 %}
+      {% for property in item.properties %}
+        {% assign pf = property.first %}
+        {% assign pl = property.last %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+  
+  {% comment %} Members {% endcomment %}
+  {% if pl == '/pages/tickets-members' %}
+    <div class="enter-ticket-code">
+        <label for="member-id">*Please enter your member ID number (Required)</label>
+        <input class="ticket-code-style" type="text" name="attributes[member-id]" id="member-id" value="{{ cart.member-id }}" />
+    </div>
+  {% endif %}
+  
+  {% comment %} Categories 1–4 {% endcomment %}
+  {% if pl == '/pages/tickets-jbf-1' or pl == '/pages/tickets-jbf-2' or pl == '/pages/tickets-bbj-jbf-3' or pl == '/pages/tickets-jbf-bbj-4' %}
+    <div class="enter-ticket-code">
+      <label for="ticket-code">*Once you are ready to check out, please re-enter your custom ticket code here: first initial and last name, all ONEWORD, and in ALLCAPS. Example: James Beard&rsquo;s code is JBEARD (Required)</label>
+    <input class="ticket-code-style" type="text" name="attributes[ticket-code]" id="ticket-code" value="{{ cart.ticket-code }}" /></div>
+  {% endif %}
+  
+  {% comment %} All Categories {% endcomment %}
+  <div class="bbj-dietary-restrictions-form">
+    <label for="bbj-dietary-restrictions">Please list your guests&rsquo; names and dietary restrictions for the Media Awards dinner, if&nbsp;applicable</label>
+    <textarea class="bbj-dietary-restrictions-style" rows="4" name="attributes[bbj-dietary-restrictions]" id="bbj-dietary-restrictions" value="{{ cart.bbj-dietary-restrictions }}"></textarea>
+  </div>
+
+  <h3 style="margin-bottom: 18px;">TOTAL: {{ cart.total_price | money }}</h3>
+    
+  <table class="cart-action">    
+    <tr>
+      <td class="cart-continue-shopping"><a id="continue-shopping-anchor" href="{{ pl }}"><img src="{{ 'continue-shopping-button-2019.png' | file_url }}" width="168" height="25" /></a></td>
+      
+      <td class="cart-update">
+          <input type="image" src="{{ 'update-button-2019.png' | file_url }}" id="update-cart" name="update" value="Update" width="113" height="25"/>
+      </td>
+    
+      <td class="cart-checkout">
+          <input type="image" src="{{ 'checkout-button-2019.png' | file_url }}" name="checkout" value="Checkout" width="113" height="25" />
+      </td>
+      
+      <td class="cart-cc-logos">
+          <img src="{{ 'cc_logos.png' | file_url }}" width="84" height="20" />
+      </td>
+    </tr>
+  </table>
+
+</form>
+{% endif %}

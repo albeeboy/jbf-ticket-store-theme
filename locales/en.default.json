@@ -1,0 +1,11 @@
+{
+  "shopify": {
+    "checkout": {
+      "contact": {
+        "shipping_address_title": "Billing address",
+        "email_placeholder": "Email (required)",
+        "email_label": "Email (required)"
+      }
+    }
+  }
+}

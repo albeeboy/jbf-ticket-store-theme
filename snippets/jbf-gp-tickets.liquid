@@ -1,0 +1,29 @@
+<h2>Ticket Information</h2>
+<table class="ticket-table">
+    <tbody>
+    {% capture rightnow %}{{ 'now' | date: '%s' }}{% endcapture %}
+    {% capture onsale %}{{ '2016-3-22T00:00:00EDT' | date: '%s' }}{% endcapture %}
+      
+	{% if page.id == null %}
+        <tr>
+            <td class="table-description" style="color: #999;">General Public Tickets Go On Sale March 22, 2016</td>
+            <td class="table-cost" style="color: #999;">$500.00</td>
+            <td class="table-third-col-spacer"></td>
+            <td class="table-quantity"></td>
+            <td class="table-penultimate-col-spacer"></td>
+            <td class="table-buttons">{% include 'on-sale-3-22-16' %}</td>
+        </tr>
+      {% else %}
+      	<tr>
+            <td class="table-description">General Public Ticket</td>
+            <td class="table-cost">$500.00</td>
+            <td class="table-third-col-spacer"></td>
+            <td class="table-quantity"></td>
+            <td class="table-penultimate-col-spacer"></td>
+            <td class="table-buttons"><a href="/products/jbf-awards-general-admission?pid={{ page.id }}">{% include 'details-button' %}</a></td>
+        </tr>
+      {% endif %}
+    </tbody>
+</table>
+{% comment %}4967182{% endcomment %}
+{% comment %}35301422{% endcomment %}

@@ -1,0 +1,38 @@
+{% assign ticket_description = 'Member Ticket*' %}
+
+<h2>Ticket Information</h2>
+<table class="ticket-table">
+    <tbody>
+    {% capture rightnow %}{{ 'now' | date: '%s' }}{% endcapture %}
+    {% capture onsale %}{{ '2016-3-22T00:00:00EDT' | date: '%s' }}{% endcapture %}
+      
+	{% if page.id == null %}
+        <tr>
+            <td class="table-description" style="color: #999;">Member Tickets Go On Sale March 22, 2016</td>
+            <td class="table-cost" style="color: #999;">$425.00</td>
+            <td class="table-third-col-spacer"></td>
+            <td class="table-quantity"></td>
+            <td class="table-penultimate-col-spacer"></td>
+            <td class="table-buttons">{% include 'on-sale-3-22-16' %}</td>
+        </tr>
+	{% else %}
+        <tr>
+            <td class="table-description">{% if page.id == 4968382 %} {{ ticket_description | remove: '*' }} {% else %} {{ ticket_description }} {% endif %}</td>
+            <td class="table-cost">$425.00</td>
+            <td class="table-third-col-spacer"></td>
+            <td class="table-quantity"></td>
+            <td class="table-penultimate-col-spacer"></td>
+            <td class="table-buttons"><a href="/products/jbf-awards-member-admission?pid={{ page.id }}">{% include 'details-button' %}</a></td>
+        </tr>
+		{% if page.id == 4968382 %}
+      		{% comment %}No disclaimer{% endcomment %}
+      	{% else %}
+        <tr>
+          <td id="ticket-review-disclaimer" colspan="6">* All purchases will be reviewed to confirm that you are a current member.</td>
+        </tr>
+      	{% endif %}
+	{% endif %}
+    </tbody>
+</table>
+
+{% comment %}4967822{% endcomment %}

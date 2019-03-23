@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!-- include 'forward-to-home' -->
+
+<title>{{ shop.name }} &mdash; {{ page_title }}</title>
+
+<link rel="shortcut icon" href="{{ 'favicon.ico' | asset_url }}">
+<link rel="apple-touch-icon" href="{{ 'apple_touch_icon.png' | asset_url }}">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ 'apple_touch_icon_ipad.png' | asset_url }}">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ 'apple_touch_icon_hi-rez.png' | asset_url }}">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ 'apple_touch_icon_ipad_hi-rez.png' | asset_url }}">
+
+{{ 'http://jbfawards.com/2012/new_june_light_bold/New_June_no_ligatures.css' | stylesheet_tag }}
+{{ 'http://jbfawards.com/2012/new_june_regular/New_June_no_ligatures2.css' | stylesheet_tag }}
+{{ 'https://fast.fonts.net/cssapi/796f6008-39c3-471e-a9ba-12f5f10ee9ee.css' | stylesheet_tag }}
+
+{{ 'store.scss.css' | asset_url | stylesheet_tag }}
+{{ 'webfonts.css' | asset_url | stylesheet_tag }}
+
+{{ 'mootools.js'        | global_asset_url  | script_tag }}
+{{ 'slimbox.js'         | global_asset_url  | script_tag }}
+{{ 'option_selection.js' | shopify_asset_url | script_tag }}
+
+{{ 'https://platform.twitter.com/widgets.js' | script_tag }}
+{{ 'https://platform.linkedin.com/in.js' | script_tag }}
+
+{{ content_for_header }}
+
+</head>
+
+<body id="page-{{ template }}">
+
+<div id="container"> <!-- BEGIN CONTAINER -->
+
+  {% include 'jbf-header' %}
+
+
+  <div id="main"> <!-- BEGIN MAIN -->
+    
+    <div id="content-column"> <!-- BEGIN CONTENT-COLUMN -->
+
+
+      {{ content_for_layout }}
+      
+
+      <p class="in-line-divider"></p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      
+      
+       {% include 'jbf-visa-signature-line' %}
+      
+    </div> <!--  END CONTENT-COLUMN -->
+
+      {% include 'jbf-sponsor-sidebar' %}
+
+      {% include 'jbf-footer' %}
+
+  </div> <!-- END MAIN --> 
+</div> <!-- END CONTAINER -->
+
+</body>
+</html>
