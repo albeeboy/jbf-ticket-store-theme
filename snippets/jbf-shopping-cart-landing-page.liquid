@@ -1,0 +1,4 @@
+<div id="shopping-cart">
+	<img id="shopping-cart-icon" src="{{ 'shopping_cart_icon.png' | file_url }}" width="20" height="20" alt="Shopping Cart" />
+	<a href="/cart?pid={{ page.id }}">Your cart contains {{ cart.item_count }} {{ cart.item_count | pluralize: 'item', 'items' }}</a>
+</div>

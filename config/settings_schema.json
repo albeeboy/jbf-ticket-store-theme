@@ -1,0 +1,176 @@
+[
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "layout_heading_color",
+        "label": "Heading Color",
+        "default": "#c1191c"
+      },
+      {
+        "type": "color",
+        "id": "layout_text_color",
+        "label": "Text Color",
+        "default": "#403b35"
+      },
+      {
+        "type": "color",
+        "id": "layout_body_color",
+        "label": "Body Background Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "layout_link_color",
+        "label": "Link Color",
+        "default": "#55abd2"
+      },
+      {
+        "type": "color",
+        "id": "layout_link_color_hover",
+        "label": "Link Color (hover)",
+        "default": "#9c0002"
+      }
+    ]
+  },
+  {
+    "name": "Navigation",
+    "settings": [
+      {
+        "type": "color",
+        "id": "nav_text_color",
+        "label": "Text Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "nav_text_hover_color",
+        "label": "Text Color (hover)",
+        "default": "#272a2d"
+      },
+      {
+        "type": "color",
+        "id": "nav_tab_color",
+        "label": "Tab Background",
+        "default": "#740003"
+      },
+      {
+        "type": "color",
+        "id": "nav_tab_hover_color",
+        "label": "Tab Background (hover)",
+        "default": "#ffffff"
+      }
+    ]
+  },
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "use_logo_image",
+        "label": "Use a logo?"
+      },
+      {
+        "type": "image",
+        "id": "logo.png",
+        "label": "Image",
+        "max-width": 340,
+        "max-height": 40
+      },
+      {
+        "type": "checkbox",
+        "id": "use_header_bg_image",
+        "label": "Use a background image?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "header.png",
+        "label": "Background Image"
+      },
+      {
+        "type": "color",
+        "id": "header_bg_color",
+        "label": "Background Color",
+        "default": "#9b0103"
+      },
+      {
+        "type": "color",
+        "id": "header_heading_color",
+        "label": "Heading Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "header_heading_color_hover",
+        "label": "Heading Color (hover)",
+        "default": "#dedac6"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "select",
+        "id": "regular_font",
+        "label": "Site Font",
+        "options": [
+          {
+            "value": "'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Lucida, Helvetica, Arial, sans-serif",
+            "label": "'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Lucida, Helvetica, Arial, sans-serif"
+          },
+          {
+            "value": "Georgia, Utopia, 'Times New Roman', Times, serif",
+            "label": "Georgia, Utopia, 'Times New Roman', Times, serif"
+          },
+          {
+            "value": "Impact, Charcoal, Helvetica, Arial, sans-serif",
+            "label": "Impact, Charcoal, Helvetica, Arial, sans-serif"
+          },
+          {
+            "value": "Helvetica, Arial, sans-serif",
+            "label": "Helvetica\/Arial"
+          },
+          {
+            "value": "Trebuchet MS, sans-serif",
+            "label": "Trebuchet MS",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Verdana, Helvetica, Arial, sans-serif",
+            "label": "Verdana",
+            "group": "Sans-serif"
+          },
+          {
+            "value": "Garamond, Baskerville, Caslon, serif",
+            "label": "Garamond",
+            "group": "Serif"
+          },
+          {
+            "value": "Palatino, 'Palatino Linotype', 'Book Antiqua', serif",
+            "label": "Palatino",
+            "group": "Serif"
+          },
+          {
+            "value": "'Times New Roman', Times, serif",
+            "label": "Times New Roman",
+            "group": "Serif"
+          },
+          {
+            "value": "'Courier New', Courier, monospace",
+            "label": "Courier New",
+            "group": "Monospace"
+          },
+          {
+            "value": "Monaco, 'Lucida Console', 'DejaVu Sans Mono', monospace",
+            "label": "Monaco\/Lucida Console",
+            "group": "Monospace"
+          }
+        ],
+        "default": "'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Lucida, Helvetica, Arial, sans-serif"
+      }
+    ]
+  }
+]

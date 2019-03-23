@@ -1,0 +1,23 @@
+    <div id="general-info"> <!-- BEGIN GENERAL INFO DIV -->
+      	<h1>2019 James Beard<br>Media Awards Dinner</h1>		
+		<p class="event-date">Friday, April 26, 2019</p>
+    	<p class="event-details" style="margin-bottom: 40px;">6:00 pm <br />
+		Pier Sixty at Chelsea Piers <br />
+		23rd Street and West Side Highway <br />
+		New York, NY</p>
+				
+	</div> <!-- END GENERAL INFO DIV -->
+
+	{% if page.id == 4972462 %}
+	<div class="hash-handle"><img src="{{ 'hash_handle.png' | file_url }}" width="174" height="30" alt="#JBFA @BEARDFOUNDATION" /></div>
+
+	<div id="social-network-widgets"> <!-- SOCIAL NETWORK WIDGETS -->
+        <div class="share-twitter"><a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div>
+		<div class="share-linked-in">
+		    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fwww.jbfawards.com&title=2011%20James%20Beard%20Foundation%20Awards&source=James%20Beard%20Foundation" target="_blank"><span>LinkedIn</span></a>
+		</div>
+		<iframe class="share-facebook" id="facebook-button" src="https://www.facebook.com/plugins/like.php?href=http://www.jbfawards.com" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+					
+	</div> <!-- END SOCIAL NETWORK WIDGETS -->
+
+	{% endif %}

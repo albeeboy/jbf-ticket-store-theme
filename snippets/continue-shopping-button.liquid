@@ -1,0 +1,14 @@
+{{ '//ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js' | script_tag }}
+{{ 'jquery.products.min.js' | asset_url | script_tag }}
+
+
+{% raw %}
+<script id="recently-viewed-product-template"  type="text/x-jquery-tmpl">
+<a href="${url}"><img src="{{ 'button_2018_continue-shopping_0.png' | file_url }}" width="168" height="25" alt="Continue Shopping"/></a>
+</script>
+{% endraw %}
+
+<script>
+Shopify.Products.showRecentlyViewed( { howManyToShow:1 } );
+</script>
+

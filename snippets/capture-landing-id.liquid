@@ -1,0 +1,26 @@
+{% capture content_for_query_string %}{{ content_for_header }}{% endcapture %}
+{% assign local_url = content_for_query_string | split:'"pageurl":"' | last | split:'"' | first | split:'.myshopify.com' | last | replace:'\/','/' | replace:'%20',' ' | replace:'\u0026','&' %}
+{% assign landing_array = local_url | split: '?pid=' %}
+
+{% assign landing_url = '' %}
+
+{% case landing_array.last %}
+	{% when '4967182' %}
+		{% assign landing_url = '/pages/tickets-general-public' %}
+	{% when '4967822' %}
+		{% assign landing_url = '/pages/tickets-members' %}
+	{% when '1455292426' %}
+		{% assign landing_url = '/pages/tickets-discounted' %}
+	{% when '160897095' %}
+		{% assign landing_url = '/pages/tickets-gala-cooking-chefs' %}
+	{% when '4970572' %}
+		{% assign landing_url = '/pages/tickets-jbf-1' %}
+	{% when '4970632' %}
+		{% assign landing_url = '/pages/tickets-jbf-2' %}
+	{% when '4972462' %}
+		{% assign landing_url = '/pages/tickets-bbj-jbf-3' %}
+	{% when '4972482' %}
+		{% assign landing_url = '/pages/tickets-jbf-bbj-4' %}
+	{% else %}
+		{% assign landing_url = 'https://www.jamesbeard.org/awards/tickets' %}
+{% endcase %}
