@@ -7,7 +7,7 @@
             <td class="table-third-col-spacer"></td>
             <td class="table-quantity"></td>
             <td class="table-penultimate-col-spacer"></td>
-            <td class="table-buttons"><a href="/products/jbf-awards-comp-ticket-limit-1?pid={{ page.id }}">{% include 'details-button' %}</a></td>
+            <td class="table-buttons"><a href="/products/jbf-awards-comp-ticket-limit-1?h={{ 'now' | date: '%s' | md5 }}&pid={{ page.id }}">{% include 'details-button' %}</a></td>
         </tr>
 
         <tr>
@@ -16,7 +16,7 @@
             <td class="table-third-col-spacer"></td>
             <td class="table-quantity"></td>
             <td class="table-penultimate-col-spacer"></td>
-            <td class="table-buttons"><a href="/products/jbf-awards-discounted-ticket?pid={{ page.id }}">{% include 'details-button' %}</a></td>
+            <td class="table-buttons"><a href="/products/jbf-awards-discounted-ticket?h={{ 'now' | date: '%s' | md5 }}&pid={{ page.id }}">{% include 'details-button' %}</a></td>
         </tr>
 
     </tbody>

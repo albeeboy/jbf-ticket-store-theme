@@ -50,7 +50,7 @@
        
         {% include 'jbf-shopping-cart'%}
         
-        <p class="breadcrumb"><a href="{{ breadcrumb_home }}">Tickets</a> » {% if product.has_only_default_variant %}{{ product.title }}{% else %}{{ product.variants[0].title }}{% endif %}</p>
+        <p class="breadcrumb"><a href="{{ breadcrumb_home }}/?h={{ 'now' | date: '%s' | md5 }}">Tickets</a> » {% if product.has_only_default_variant %}{{ product.title }}{% else %}{{ product.variants[0].title }}{% endif %}</p>
         
         <h1>Ticket Information</h1>
 

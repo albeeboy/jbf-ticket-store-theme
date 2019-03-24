@@ -1,6 +1,6 @@
 {% capture content_for_query_string %}{{ content_for_header }}{% endcapture %}
 {% assign local_url = content_for_query_string | split:'"pageurl":"' | last | split:'"' | first | split:'.myshopify.com' | last | replace:'\/','/' | replace:'%20',' ' | replace:'\u0026','&' %}
-{% assign landing_array = local_url | split: '?pid=' %}
+{% assign landing_array = local_url | split: 'pid=' %}
 
 {% assign landing_url = '' %}
 

@@ -7,8 +7,8 @@
             <td class="table-third-col-spacer"></td>
             <td class="table-quantity"></td>
             <td class="table-penultimate-col-spacer"></td>
-            <td class="table-buttons"><a href="/products/jbf-awards-discounted-ticket?pid={{ page.id }}">{% include 'details-button' %}</a></td>
-            {% comment %}<a href="/products/jbf-awards-discounted-ticket?pid={{ page.id }}">{% include 'details-button' %}</a>{% endcomment %}
+            <td class="table-buttons"><a href="/products/jbf-awards-discounted-ticket?h={{ 'now' | date: '%s' | md5 }}&pid={{ page.id }}">{% include 'details-button' %}</a></td>
+            {% comment %}<a href="/products/jbf-awards-discounted-ticket?h={{ 'now' | date: '%s' | md5 }}&pid={{ page.id }}">{% include 'details-button' %}</a>{% endcomment %}
             {% comment %}{% include 'closed-event-button' %}{% endcomment %}
             {% comment %}class="closed" to turn text gray{% endcomment %}
         </tr>

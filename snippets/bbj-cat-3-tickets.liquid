@@ -7,7 +7,7 @@
         <td class="table-third-col-spacer"></td>
         <td class="table-quantity"></td>
         <td class="table-penultimate-col-spacer"></td>
-        <td class="table-buttons"><a href="/products/jbf-media-awards-comp-ticket?pid={{ page.id }}">{% include 'details-button' %}</a></td>
+        <td class="table-buttons"><a href="/products/jbf-media-awards-comp-ticket?h={{ 'now' | date: '%s' | md5 }}&pid={{ page.id }}">{% include 'details-button' %}</a></td>
         {% comment %}{% include 'closed-event-button' %}{% endcomment %}
       </tr>
 
@@ -17,7 +17,7 @@
         <td class="table-third-col-spacer"></td>
         <td class="table-quantity"></td>
         <td class="table-penultimate-col-spacer"></td>
-        <td class="table-buttons"><a href="/products/jbf-media-awards-general-admission?pid={{ page.id }}">{% include 'details-button' %}</a></td>
+        <td class="table-buttons"><a href="/products/jbf-media-awards-general-admission?h={{ 'now' | date: '%s' | md5 }}&pid={{ page.id }}">{% include 'details-button' %}</a></td>
         {% comment %}{% endcomment %}
       </tr>
       
@@ -27,7 +27,7 @@
         <td class="table-third-col-spacer"></td>
         <td class="table-quantity"></td>
         <td class="table-penultimate-col-spacer"></td>
-        <td class="table-buttons"><a href="/products/jbf-media-awards-table?pid={{ page.id }}">{% include 'details-button' %}</a></td>
+        <td class="table-buttons"><a href="/products/jbf-media-awards-table?h={{ 'now' | date: '%s' | md5 }}&pid={{ page.id }}">{% include 'details-button' %}</a></td>
         {% comment %}{% endcomment %}
       </tr>
 
@@ -37,7 +37,7 @@
         <td class="table-third-col-spacer"></td>
         <td class="table-quantity"></td>
         <td class="table-penultimate-col-spacer"></td>
-        <td class="table-buttons"><a href="/products/jbf-media-awards-sponsor?pid={{ page.id }}">{% include 'details-button' %}</a></td>
+        <td class="table-buttons"><a href="/products/jbf-media-awards-sponsor?h={{ 'now' | date: '%s' | md5 }}&pid={{ page.id }}">{% include 'details-button' %}</a></td>
       </tr>
 	</tbody>
 </table>
