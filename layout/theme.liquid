@@ -8,11 +8,7 @@
   
 <title>{{ shop.name }} &mdash; {{ page_title }}</title>
 
-<link rel="shortcut icon" href="{{ 'favicon.ico' | asset_url }}">
-<link rel="apple-touch-icon" href="{{ 'apple_touch_icon.png' | asset_url }}">
-<link rel="apple-touch-icon" sizes="72x72" href="{{ 'apple_touch_icon_ipad.png' | asset_url }}">
-<link rel="apple-touch-icon" sizes="114x114" href="{{ 'apple_touch_icon_hi-rez.png' | asset_url }}">
-<link rel="apple-touch-icon" sizes="144x144" href="{{ 'apple_touch_icon_ipad_hi-rez.png' | asset_url }}">
+{% include 'jbf-head-icons' %}
 
 {{ 'http://jbfawards.com/2012/new_june_light_bold/New_June_no_ligatures.css' | stylesheet_tag }}
 {{ 'http://jbfawards.com/2012/new_june_regular/New_June_no_ligatures2.css' | stylesheet_tag }}
