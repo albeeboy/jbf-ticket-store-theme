@@ -11,7 +11,9 @@
 	{% if page.id == 4972462 %}
 	  {% comment %}No social media panel here{% endcomment %}
 	{% else %}
-      <div class="hash-handle"><img src="{{ 'hash_handle.png' | file_url }}" width="174" height="30" alt="#JBFA @BEARDFOUNDATION" /></div>
+      {% comment %}<div class="hash-handle"><img src="{{ 'hash_handle.png' | file_url }}" width="174" height="30" alt="#JBFA @BEARDFOUNDATION" /></div>{% endcomment %}
+
+      <div class="hash-handle text">#JBFA<br>@BEARDFOUNDATION</div>
 
       <div id="social-network-widgets"> <!-- SOCIAL NETWORK WIDGETS -->
           <div class="share-twitter"><a href="//twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a></div>
