@@ -5,7 +5,8 @@
 {% if cart.item_count == 0 %}
   {% include 'capture-landing-id' %}
   <p style="font-weight: bold; margin: 0 0 18px 0;">Your shopping basket is empty.</p>
-    <div style="margin: 0 0 24px 0;"><a href="{{ landing_url }}?h={{ 'now' | date: '%s' | md5 }}?h={{ 'now' | date: '%s' | md5 }}"><img src="{{ 'button_2017_continue-shopping_0.png' | file_url }}" width="168" height="25" /></a></div>  
+    <div style="margin: 0 0 24px 0;"><a href="{{ landing_url }}?h={{ 'now' | date: '%s' | md5 }}"><img src="{{ 'continue-shopping-button-2019.png' | file_url }}" width="168" height="25" /></a></div>
+    <p style="display: none;">{{ landing_url }}</p>
 {% else %}
 <script type="text/javascript">
   function remove_item(id) {

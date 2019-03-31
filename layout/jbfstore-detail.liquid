@@ -82,6 +82,7 @@
                 <td class="table-buttons">
                   <input type="image" src="{{ 'add-to-cart-button-2019.png' | file_url }}" name="add" id="purchase" width="113" height="25" />
                   <input type="hidden" name="id" value="{{ product.variants[0].id }}" />
+                  <input type="hidden" id="landing_page_id" name="properties[landing_page_id]" value="{{ landing_array.last }}" />
                   <input type="hidden" id="landing" name="properties[landing]" value="{{ landing_url }}" />
                   {% comment %}<input type="hidden" name="" id="landing" value="{{ landing_url }}" />{% endcomment %}
                 </td>
