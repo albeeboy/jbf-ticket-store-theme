@@ -2,42 +2,43 @@
 <table class="ticket-table">
 	<tbody>
       <tr>
-        <td class="table-description">Comp Ticket</td>
-        <td class="table-cost">$0.00</td>
+        <td class="table-description closed">Comp Ticket</td>
+        <td class="table-cost closed">$0.00</td>
         <td class="table-third-col-spacer"></td>
         <td class="table-quantity"></td>
         <td class="table-penultimate-col-spacer"></td>
-        <td class="table-buttons"><a href="/products/jbf-media-awards-comp-ticket?h={{ 'now' | date: '%s' | md5 }}&pid={{ page.id }}">{% include 'details-button' %}</a></td>
-        {% comment %}{% include 'closed-event-button' %}{% endcomment %}
+        <td class="table-buttons">{% include 'closed-event-button' %}</td>
+        {% comment %}<a href="/products/jbf-media-awards-comp-ticket?h={{ 'now' | date: '%s' | md5 }}&pid={{ page.id }}">{% include 'details-button' %}</a>{% endcomment %}
       </tr>
 
       <tr>
-        <td class="table-description">General Public Ticket</td>
-        <td class="table-cost">$350.00</td>
+        <td class="table-description closed">General Public Ticket</td>
+        <td class="table-cost closed">$350.00</td>
         <td class="table-third-col-spacer"></td>
         <td class="table-quantity"></td>
         <td class="table-penultimate-col-spacer"></td>
-        <td class="table-buttons"><a href="/products/jbf-media-awards-general-admission?h={{ 'now' | date: '%s' | md5 }}&pid={{ page.id }}">{% include 'details-button' %}</a></td>
-        {% comment %}{% endcomment %}
+        <td class="table-buttons">{% include 'closed-event-button' %}</td>
+        {% comment %}<a href="/products/jbf-media-awards-general-admission?h={{ 'now' | date: '%s' | md5 }}&pid={{ page.id }}">{% include 'details-button' %}</a>{% endcomment %}
       </tr>
       
       <tr>
-        <td class="table-description">Table (seats 10)</td>
-        <td class="table-cost">$3,500.00</td>
+        <td class="table-description closed">Table (seats 10)</td>
+        <td class="table-cost closed">$3,500.00</td>
         <td class="table-third-col-spacer"></td>
         <td class="table-quantity"></td>
         <td class="table-penultimate-col-spacer"></td>
-        <td class="table-buttons"><a href="/products/jbf-media-awards-table?h={{ 'now' | date: '%s' | md5 }}&pid={{ page.id }}">{% include 'details-button' %}</a></td>
-        {% comment %}{% endcomment %}
+        <td class="table-buttons">{% include 'closed-event-button' %}</td>
+        {% comment %}<a href="/products/jbf-media-awards-table?h={{ 'now' | date: '%s' | md5 }}&pid={{ page.id }}">{% include 'details-button' %}</a>{% endcomment %}
       </tr>
 
       <tr>
-        <td class="table-description">BECOME A SPONSOR!</td>
-        <td class="table-cost">$5,000.00</td>
+        <td class="table-description closed">BECOME A SPONSOR!</td>
+        <td class="table-cost closed">$5,000.00</td>
         <td class="table-third-col-spacer"></td>
         <td class="table-quantity"></td>
         <td class="table-penultimate-col-spacer"></td>
-        <td class="table-buttons"><a href="/products/jbf-media-awards-sponsor?h={{ 'now' | date: '%s' | md5 }}&pid={{ page.id }}">{% include 'details-button' %}</a></td>
+        <td class="table-buttons">{% include 'closed-event-button' %}</td>
+        {% comment %}<a href="/products/jbf-media-awards-sponsor?h={{ 'now' | date: '%s' | md5 }}&pid={{ page.id }}">{% include 'details-button' %}</a>{% endcomment %}
       </tr>
 	</tbody>
 </table>
