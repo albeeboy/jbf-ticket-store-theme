@@ -1,0 +1,23 @@
+LANDING PAGES                                                                          PAGE ID
+1. https://jbftickets.myshopify.com/pages/tickets-general-public => A,B,C,J            4967182
+2. https://jbftickets.myshopify.com/pages/tickets-members => D,B,C,J                   4967822
+3. https://jbftickets.myshopify.com/pages/tickets-discounted => E,B,C,J                1455292426
+4. https://jbftickets.myshopify.com/pages/tickets-gala-cooking-chefs => F,E,B,C,J      160897095
+5. https://jbftickets.myshopify.com/pages/tickets-jbf-1 => G,E,B,C,J                   4970572
+6: https://jbftickets.myshopify.com/pages/tickets-jbf-2 => H,E,B,C,J                   4970632
+7: https://jbftickets.myshopify.com/pages/tickets-bbj-jbf-3 => I,B,C,E,J               4972462
+8: https://jbftickets.myshopify.com/pages/tickets-jbf-bbj-4 => G,E,I,B,C,J             4972482
+
+
+PRODUCT PAGES                                                                                               PRODUCT ID         VARIANT ID
+A. GP Ticket: https://jbftickets.myshopify.com/products/jbf-awards-general-admission                        (35301422)         81926022
+B. Media Awards GP Ticket: https://jbftickets.myshopify.com/products/jbf-media-awards-general-admission     (35305652)         81939192
+C: Media Awards Table: https://jbftickets.myshopify.com/products/jbf-media-awards-table                     (35427502)         82190922
+D: Member Ticket (Unlimited): https://jbftickets.myshopify.com/products/jbf-awards-member-admission         (35301502)         81926152
+E: Discounted Ticket: https://jbftickets.myshopify.com/products/jbf-awards-discounted-ticket                (5601372359)       17658558663
+F: Awards Credential (1): https://jbftickets.myshopify.com/products/jbf-awards-cooking-chef-credential      (5600661383)       17657167175
+G: Comp Ticket (1): https://jbftickets.myshopify.com/products/jbf-awards-comp-ticket-limit-1                (36900462)         85755152
+H: Comp Ticket (2) :https://jbftickets.myshopify.com/products/jbf-awards-comp-ticket-limit-2                (36935122)         85873372
+I: Media Awards Comp Ticket (1): https://jbftickets.myshopify.com/products/jbf-media-awards-comp-ticket     (36063792)         83605852
+J: Media Awards Sponsor: https://jbftickets.myshopify.com/products/jbf-media-awards-sponsor                 (2422088564818)    N/A
+
